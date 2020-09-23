@@ -8,9 +8,11 @@
                 <div class="panel-heading">Lista de Clientes</div>
 
                 <div class="panel-body">
-                
-                <table class="table table-bordered">
-                        <thead>
+                <p>
+                        <a class="btn btn-info" href="{{route('cliente.adicionar')}}">Adicionar</a>
+                    </p>
+                <table class="table table-striped">
+                        <thead class="thead-dark">
                             <tr>
                                 <th>#</th>
                                 <th>Nome</th>

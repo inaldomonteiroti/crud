@@ -18,3 +18,4 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/clientes', ['uses'=>'ClienteController@index','as'=>'cliente.index']);
+Route::get('/clientes/adicionar', ['uses'=>'ClienteController@adicionar','as'=>'cliente.adicionar']);
