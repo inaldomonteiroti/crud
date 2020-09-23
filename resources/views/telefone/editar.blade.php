@@ -12,7 +12,7 @@
                 </ol>
 
                 <div class="panel-body"> 
-                <p><b>Cliente: </b>{{ $telefone->cliente->nome }}</p>                                   
+                <p><b>Cliente: </b>{{ $telefone->cliente->name }}</p>                                   
                     <form action="{{ route('telefone.atualizar',$telefone->id) }}" method="post">
                         {{ csrf_field() }}
                         <input type="hidden" name="_method" value="put">

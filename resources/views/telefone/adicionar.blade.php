@@ -12,7 +12,7 @@
                 </ol>
 
                 <div class="panel-body"> 
-                <p><b>Cliente: </b>{{ $cliente->nome }}</p>                                   
+                <p><b>Cliente: </b>{{ $cliente->name }}</p>                                   
                     <form action="{{ route('telefone.salvar',$cliente->id) }}" method="post">
                         {{ csrf_field() }}
                         
