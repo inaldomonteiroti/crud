@@ -57,7 +57,7 @@ class ClienteController extends Controller
         return view('cliente.editar',compact('cliente'));
     }
 
-    public function atualizar(\App\Http\Requests\ClienteRequest $request,$id)
+    public function atualizar(Request $request,$id)
     {
         \App\Cliente::find($id)->update($request->all());
         
