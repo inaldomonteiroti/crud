@@ -33,6 +33,8 @@ class ClienteController extends Controller
     public function salvar(Request $request){
     	\App\Cliente::create($request->all());
 
+
+        //Definindo a alerta para o usuário
     	\Session::flash('flash_message',[
 			'msg'=>"Cliente adicionado com Sucesso!",
 			'class'=>"alert-success"

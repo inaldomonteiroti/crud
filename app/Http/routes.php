@@ -14,7 +14,7 @@
 Route::get('/', function () {
 
 	//array_add()
-	$array = ['nome'=>'Camila','idade'=>'20'];
+	$array = ['name'=>'Camila','idade'=>'20'];
 	$array = array_add($array,'email','camila@mail.com');
 	$array = array_add($array,'amigo','Guilherme');
 	//dd($array);
@@ -25,12 +25,12 @@ Route::get('/', function () {
 	//dd($array);
 
 	//array_divide()
-	list($key,$value) = array_divide(['nome'=>'Camila','idade'=>'20']);
+	list($key,$value) = array_divide(['name'=>'Camila','idade'=>'20']);
 	//dd($key,$value);
 
 	//array_except()
-	$array = ['nome'=>'Camila','idade'=>'20'];
-	$array = array_except($array,['nome']);
+	$array = ['name'=>'Camila','idade'=>'20'];
+	$array = array_except($array,['name']);
 	//dd($array);
 
 	//base_path()
@@ -60,10 +60,6 @@ Route::get('/', function () {
 	//str_limit()
 	$text = "Guilherme esta criando uma nova aula";
 	//dd(str_limit($text,5));
-
-
-
-
 
     return view('welcome');
 });

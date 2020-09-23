@@ -14,12 +14,12 @@
                     <form action="{{ route('cliente.atualizar',$cliente->id) }}" method="post">
                         {{ csrf_field() }}
                         <input type="hidden" name="_method" value="put">
-                        <div class="form-group {{ $errors->has('nome') ? 'has-error' : '' }}">
-                            <label for="nome">Nome</label>
-                            <input type="text" name="nome" class="form-control" placeholder="Nome do cliente" value="{{$cliente->nome}}">
-                            @if($errors->has('nome'))
+                        <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" class="form-control" placeholder="Nome do cliente" value="{{$cliente->name}}">
+                            @if($errors->has('name'))
                                 <span class="help-block">
-                                    <strong>{{ $errors->first('nome') }}</strong>
+                                    <strong>{{ $errors->first('name') }}</strong>
                                 </span>
                             @endif
                         </div>
