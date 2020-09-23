@@ -9,9 +9,8 @@
                     <li><a href="{{ route('cliente.adicionar') }}">Clientes</a></li>
                     <li class="active">Adicionar</li>
                 </ol>
-
                 <div class="panel-body">                                    
-                    <form action="#" method="post">
+                    <form action="{{ route('cliente.salvar') }}" method="post">
                         {{ csrf_field() }}
 
                         <div class="form-group {{ $errors->has('nome') ? 'has-error' : '' }}">
@@ -42,10 +41,7 @@
                             @endif
                         </div>
                         <button class="btn btn-info">Adicionar</button>
-                        
                     </form>
-                    
-
                 </div>
             </div>
         </div>

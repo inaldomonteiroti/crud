@@ -3,16 +3,19 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Lista de Clientes</div>
+                <ol class="breadcrumb panel-heading">                    
+                    <li class="active">Clientes</li>
+                </ol>
 
                 <div class="panel-body">
-                <p>
-                        <a class="btn btn-info" href="{{route('cliente.adicionar')}}">Adicionar</a>
+                    <p>
+                        <a class="btn btn-info" href="{{ route('cliente.adicionar') }}">Adicinar</a>
                     </p>
-                <table class="table table-striped">
-                        <thead class="thead-dark">
+                    
+                    <table class="table table-bordered">
+                        <thead>
                             <tr>
                                 <th>#</th>
                                 <th>Nome</th>
@@ -30,9 +33,9 @@
                                 <td>{{ $cliente->email }}</td>
                                 <td>{{ $cliente->endereco }}</td>
                                 <td>
-                                    <a class="btn btn-default" href="#">Detalhe</a>
-                                    <a class="btn btn-default" href="#">Editar</a>
-                                    <a class="btn btn-danger" href="#">Deletar</a>
+                                    <a class="btn btn-default" href="{{route('cliente.detalhe',$cliente->id)}}">Detalhe</a>
+                                    <a class="btn btn-default" href="{{route('cliente.editar',$cliente->id)}}">Editar</a>
+                                    <a class="btn btn-danger" href="javascript:(confirm('Deletar esse registro?') ? window.location.href='{{route('cliente.deletar',$cliente->id)}}' : false)">Deletar</a>
                                 </td>
                             </tr>                            
 
@@ -45,8 +48,6 @@
                     <div align="center">
                         {!! $clientes->links() !!}
                     </div>
-                </div>
-
 
                 </div>
             </div>
