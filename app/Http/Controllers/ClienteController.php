@@ -86,7 +86,7 @@ class ClienteController extends Controller
 
         \Session::flash('flash_message',[
             'msg'=>"Cliente deletado com Sucesso!",
-            'class'=>"alert-success"
+            'class'=>"alert-danger"
         ]);
 
         return redirect()->route('cliente.index'); 
