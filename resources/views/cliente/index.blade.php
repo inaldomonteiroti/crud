@@ -28,7 +28,9 @@
                                 <td>{{ $cliente->email }}</td>
                                 <td>{{ $cliente->endereco }}</td>
                                 <td>
-                                    
+                                    <a class="btn btn-default" href="#">Detalhe</a>
+                                    <a class="btn btn-default" href="#">Editar</a>
+                                    <a class="btn btn-danger" href="#">Deletar</a>
                                 </td>
                             </tr>                            
 
