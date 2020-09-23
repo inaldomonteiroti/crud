@@ -74,13 +74,13 @@ class ClienteController extends Controller
     {
         $cliente = \App\Cliente::find($id);
 
-        // if(!$cliente->deletarTelefones()){
-        //     \Session::flash('flash_message',[
-        //         'msg'=>"Registro não pode ser deletado!",
-        //         'class'=>"alert-danger"
-        //     ]);
-        //     return redirect()->route('cliente.index');
-        // }
+        if(!$cliente->deletarTelefones()){
+            \Session::flash('flash_message',[
+                'msg'=>"Registro não pode ser deletado!",
+                'class'=>"alert-danger"
+            ]);
+            return redirect()->route('cliente.index');
+        }
 
         $cliente->delete();
 
