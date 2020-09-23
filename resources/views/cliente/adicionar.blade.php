@@ -13,12 +13,12 @@
                     <form action="{{ route('cliente.salvar') }}" method="post">
                         {{ csrf_field() }}
 
-                        <div class="form-group {{ $errors->has('nome') ? 'has-error' : '' }}">
-                            <label for="nome">Nome</label>
-                            <input type="text" name="nome" class="form-control" placeholder="Nome do cliente">
-                            @if($errors->has('nome'))
+                        <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" class="form-control" placeholder="Nome do cliente">
+                            @if($errors->has('name'))
                                 <span class="help-block">
-                                    <strong>{{ $errors->first('nome') }}</strong>
+                                    <strong>{{ $errors->first('name') }}</strong>
                                 </span>
                             @endif
                         </div>

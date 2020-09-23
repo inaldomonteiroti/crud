@@ -11,7 +11,7 @@
 
                 <div class="panel-body">
                     <p>
-                        <a class="btn btn-info" href="{{ route('cliente.adicionar') }}">Adicinar</a>
+                        <a class="btn btn-info" href="{{ route('cliente.adicionar') }}">Adicionar</a>
                     </p>
                     
                     <table class="table table-bordered">
