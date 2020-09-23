@@ -12,6 +12,10 @@
                 @foreach($clientes as $cliente)
                 <li>{{$cliente->name}}</li>
                 @endforeach
+                <div align="center">
+                {!! $clientes->links() !!}
+                </div>
+
 
                 </div>
             </div>
