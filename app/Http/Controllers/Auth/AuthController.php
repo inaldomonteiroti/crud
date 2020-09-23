@@ -52,6 +52,16 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+        ],[
+            'name.required' => 'Preencha um nome',
+            'name.max' => 'Preencha um nome com no máximo 255 caracteres',
+            'email.required' => 'Preencha um e-mail',
+            'email.email' => 'Preencha um e-mail válido',
+            'email.unique' => 'E-mail já está cadastrado',
+            'password.required' => 'Preencha uma senha',
+            'password.min' => 'Preencha uma senha com no mínimo 6 caracteres',
+            'password.confirmed' => 'Confirme coma mesma senha',
+
         ]);
     }
 
